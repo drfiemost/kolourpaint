@@ -61,6 +61,7 @@ static void AssertAllTimersInactive (struct kpAbstractSelectionToolPrivate *d)
 {
     Q_ASSERT (!d->createNOPTimer->isActive ());
     Q_ASSERT (!d->RMBMoveUpdateGUITimer->isActive ());
+    Q_UNUSED(d);
 }
 
 //---------------------------------------------------------------------

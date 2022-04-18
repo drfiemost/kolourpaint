@@ -654,7 +654,8 @@ bool kpTransformAutoCrop (kpMainWindow *mainWindow)
     Q_ASSERT (!image.isNull ());
 
     kpViewManager *vm = mainWindow->viewManager ();
-    Q_ASSERT (vm);
+    Q_ASSERT (vm); 
+    Q_UNUSED(vm);
 
     int processedColorSimilarity = mainWindow->colorToolBar ()->processedColorSimilarity ();
     kpTransformAutoCropBorder leftBorder (&image, processedColorSimilarity),

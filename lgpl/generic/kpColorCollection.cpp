@@ -457,6 +457,7 @@ void kpColorCollection::resize(int newCount)
          {
              const int ret = addColor(QColor(), QString()/*color name*/);
              Q_ASSERT(ret == count() - 1);
+             Q_UNUSED(ret);
          }
     }
 }

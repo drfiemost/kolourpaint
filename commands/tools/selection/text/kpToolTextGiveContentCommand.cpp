@@ -149,6 +149,7 @@ void kpToolTextGiveContentCommand::unexecute ()
     doc->textSelection ()->deleteContent ();
 
     // This should not have changed from the start of the method.
-    Q_ASSERT (vm->textCursorRow () == 0 && vm->textCursorCol () == 0);
+    Q_ASSERT (vm->textCursorRow () == 0 && vm->textCursorCol () == 0);    
+    Q_UNUSED(vm);
 }
 

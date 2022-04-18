@@ -590,6 +590,7 @@ void kpColorCells::slotColorChanged (int cell, const QColor &color)
     const int ret = d->colorCol.changeColor (cell, color,
         QString ()/*color name*/);
     Q_ASSERT (ret == cell);
+    Q_UNUSED(ret);
 
     setModified (true);
 }
