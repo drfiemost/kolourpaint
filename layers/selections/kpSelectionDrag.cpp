@@ -148,7 +148,3 @@ kpAbstractImageSelection *kpSelectionDrag::decode(const QMimeData *mimeData)
         }
     }
 }
-
-//---------------------------------------------------------------------
-
-#include <kpSelectionDrag.moc>

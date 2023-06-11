@@ -454,6 +454,3 @@ void kpTransformPreviewDialog::slotUpdateWithWaitCursor ()
 
     QApplication::restoreOverrideCursor ();
 }
-
-
-#include <kpTransformPreviewDialog.moc>

@@ -811,7 +811,3 @@ void kpTransformResizeScaleDialog::accept ()
     cfg.writeEntry(kpSettingResizeScaleScaleType, static_cast<int>(m_lastType));
     cfg.sync();
 }
-
-//---------------------------------------------------------------------
-
-#include <kpTransformResizeScaleDialog.moc>

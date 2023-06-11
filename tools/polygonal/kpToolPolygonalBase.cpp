@@ -496,6 +496,3 @@ void kpToolPolygonalBase::slotBackgroundColorChanged (const kpColor &)
 {
     updateShape ();
 }
-
-
-#include <kpToolPolygonalBase.moc>

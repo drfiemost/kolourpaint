@@ -139,6 +139,3 @@ kpEffectCommandBase *kpEffectToneEnhanceWidget::createCommand (
                                            m_actOnSelection,
                                            cmdEnviron);
 }
-
-
-#include <kpEffectToneEnhanceWidget.moc>

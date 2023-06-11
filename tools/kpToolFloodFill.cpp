@@ -164,7 +164,3 @@ void kpToolFloodFill::endDraw (const QPoint &, const QRect &)
     d->currentCommand = 0;
     setUserMessage (haventBegunDrawUserMessage ());
 }
-
-//---------------------------------------------------------------------
-
-#include <kpToolFloodFill.moc>

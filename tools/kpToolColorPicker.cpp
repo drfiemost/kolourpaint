@@ -140,6 +140,3 @@ void kpToolColorPicker::endDraw (const QPoint &thisPoint, const QRect &)
         cancelShape ();
     }
 }
-
-
-#include <kpToolColorPicker.moc>

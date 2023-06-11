@@ -258,7 +258,3 @@ void kpToolSpraycan::slotSpraycanSizeChanged (int size)
 {
     (void) size;
 }
-
-
-#include <kpToolSpraycan.moc>
-

@@ -91,6 +91,3 @@ QRect kpToolPen::drawLine (const QPoint &thisPoint, const QPoint &lastPoint)
     document ()->setImageAt (image, docRect.topLeft ());
     return docRect;
 }
-
-
-#include <kpToolPen.moc>

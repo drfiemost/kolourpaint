@@ -52,6 +52,3 @@ QString kpToolBrush::haventBegunDrawUserMessage () const
 // See the our corresponding .h for brush selection.
 
 // Logic is in kpToolFlowPixmapBase.
-
-
-#include <kpToolBrush.moc>

@@ -359,7 +359,3 @@ void kpViewManager::setInputMethodEnabled (bool inputMethodEnabled)
     if (d->viewUnderCursor)
         d->viewUnderCursor->setAttribute (Qt::WA_InputMethodEnabled, inputMethodEnabled);
 }
-
-//---------------------------------------------------------------------
-
-#include <kpViewManager.moc>

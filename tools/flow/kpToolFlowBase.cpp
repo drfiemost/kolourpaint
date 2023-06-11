@@ -486,7 +486,3 @@ QRect kpToolFlowBase::hotRect () const
     return hotRectForMousePointAndBrushWidthHeight (currentPoint (),
         d->brushWidth, d->brushHeight);
 }
-
-//---------------------------------------------------------------------
-
-#include <kpToolFlowBase.moc>

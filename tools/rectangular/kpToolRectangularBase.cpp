@@ -387,8 +387,3 @@ void kpToolRectangularBase::endDraw (const QPoint &, const QRect &)
 
     setUserMessage (haventBegunDrawUserMessage ());
 }
-
-//---------------------------------------------------------------------
-
-
-#include <kpToolRectangularBase.moc>

@@ -97,7 +97,3 @@ QString kpAbstractImageSelectionTool::haventBegunDrawUserMessageResizeScale () c
 {
     return i18n ("Left drag to scale selection.");
 }
-
-//---------------------------------------------------------------------
-
-#include <kpAbstractImageSelectionTool.moc>

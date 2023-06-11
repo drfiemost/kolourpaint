@@ -1175,7 +1175,3 @@ void kpViewScrollableContainer::resizeEvent (QResizeEvent *e)
 
     emit resized ();
 }
-
-//---------------------------------------------------------------------
-
-#include <kpViewScrollableContainer.moc>

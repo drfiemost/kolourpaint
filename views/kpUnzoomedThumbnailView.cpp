@@ -213,6 +213,3 @@ void kpUnzoomedThumbnailView::adjustToEnvironment ()
         viewManager ()->restoreFastUpdates ();
     }
 }
-
-
-#include <kpUnzoomedThumbnailView.moc>

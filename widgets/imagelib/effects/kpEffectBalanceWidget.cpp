@@ -320,6 +320,3 @@ void kpEffectBalanceWidget::resetAll ()
 
     emit settingsChanged ();
 }
-
-
-#include <kpEffectBalanceWidget.moc>

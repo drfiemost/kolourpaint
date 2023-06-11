@@ -291,6 +291,3 @@ void kpTransformSkewDialog::accept ()
         KDialog::accept ();
     }
 }
-
-
-#include <kpTransformSkewDialog.moc>

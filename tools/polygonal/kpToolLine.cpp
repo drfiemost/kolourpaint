@@ -88,6 +88,3 @@ void kpToolLine::endDraw (const QPoint &, const QRect &)
     Q_ASSERT (points ()->count () == 2);
     endShape ();
 }
-
-
-#include <kpToolLine.moc>

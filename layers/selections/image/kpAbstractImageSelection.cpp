@@ -576,8 +576,3 @@ void kpAbstractImageSelection::paintWithBaseImage (QImage *destImage,
 {
     ::Paint (this, baseImage (), destImage, docRect);
 }
-
-//---------------------------------------------------------------------
-
-
-#include <kpAbstractImageSelection.moc>

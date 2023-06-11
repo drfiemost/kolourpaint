@@ -96,6 +96,3 @@ void kpPrintDialogPage::setPrintImageCenteredOnPage (bool printCentered)
     else
         d->printTopLeftRadio->setChecked (true);
 }
-
-
-#include <kpPrintDialogPage.moc>

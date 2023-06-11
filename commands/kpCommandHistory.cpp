@@ -123,6 +123,3 @@ void kpCommandHistory::redo ()
     else
         kpCommandHistoryBase::redo ();
 }
-
-
-#include <kpCommandHistory.moc>

@@ -122,8 +122,3 @@ void kpTransparentColorCell::paintEvent (QPaintEvent *e)
         p.drawPixmap (contentsRect (), m_pixmap);
     }
 }
-
-//---------------------------------------------------------------------
-
-
-#include <kpTransparentColorCell.moc>

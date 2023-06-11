@@ -64,7 +64,3 @@ void kpToolAction::updateToolTip()
 
   setToolTip(newToolTip);
 }
-
-//---------------------------------------------------------------------
-
-#include <kpToolAction.moc>

@@ -244,6 +244,3 @@ void kpDocumentSaveOptionsPreviewDialog::resizeEvent (QResizeEvent *e)
 
     emit resized ();
 }
-
-
-#include <kpDocumentSaveOptionsPreviewDialog.moc>

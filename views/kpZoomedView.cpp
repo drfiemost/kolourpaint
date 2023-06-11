@@ -98,6 +98,3 @@ void kpZoomedView::adjustToEnvironment ()
                 (int) transformDocToViewY (document ()->height ()));
     }
 }
-
-
-#include <kpZoomedView.moc>

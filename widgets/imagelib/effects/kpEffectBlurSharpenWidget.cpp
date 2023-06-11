@@ -180,6 +180,3 @@ int kpEffectBlurSharpenWidget::strength () const
 {
     return qAbs (m_amountInput->value ());
 }
-
-
-#include <kpEffectBlurSharpenWidget.moc>

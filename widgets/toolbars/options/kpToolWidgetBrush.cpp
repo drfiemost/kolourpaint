@@ -293,7 +293,3 @@ bool kpToolWidgetBrush::setSelected (int row, int col, bool saveAsDefault)
         emit brushChanged ();
     return ret;
 }
-
-//---------------------------------------------------------------------
-
-#include <kpToolWidgetBrush.moc>

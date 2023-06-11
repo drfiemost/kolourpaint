@@ -323,7 +323,3 @@ void kpColorToolBar::dragMoveEvent (QDragMoveEvent *e)
     kDebug () << "isAccepted=" << e->isAccepted ();
 #endif
 }
-
-//---------------------------------------------------------------------
-
-#include <kpColorToolBar.moc>

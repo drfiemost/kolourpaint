@@ -384,6 +384,3 @@ void kpFreeFormImageSelection::paintBorder (QImage *destPixmap, const QRect &doc
         paintPolygonalBorder (cardinallyAdjacentPoints (),
             destPixmap, docRect, selectionFinished);
 }
-
-
-#include <kpFreeFormImageSelection.moc>

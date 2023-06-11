@@ -259,6 +259,3 @@ kpToolEnvironment *kpTool::environ () const
 {
     return d->environ;
 }
-
-
-#include <kpTool.moc>

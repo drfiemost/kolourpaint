@@ -208,6 +208,3 @@ void kpDocumentEnvironment::assertMatchingUIState (const kpAbstractSelection &se
         Q_ASSERT (!"Unknown selection type");
     }
 }
-
-
-#include <kpDocumentEnvironment.moc>

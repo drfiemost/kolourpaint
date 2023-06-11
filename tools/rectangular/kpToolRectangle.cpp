@@ -42,7 +42,3 @@ kpToolRectangle::kpToolRectangle (kpToolEnvironment *environ, QObject *parent)
         environ, parent, "tool_rectangle")
 {
 }
-
-//---------------------------------------------------------------------
-
-#include <kpToolRectangle.moc>

@@ -177,6 +177,3 @@ void kpToolCurve::endDraw (const QPoint &, const QRect &)
         break;
     }
 }
-
-
-#include <kpToolCurve.moc>

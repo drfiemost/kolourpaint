@@ -788,6 +788,3 @@ void kpDocumentMetaInfoDialog::accept ()
 
     KDialog::accept ();
 }
-
-
-#include <kpDocumentMetaInfoDialog.moc>

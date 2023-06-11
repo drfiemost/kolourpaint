@@ -171,7 +171,3 @@ kpEffectCommandBase *kpEffectReduceColorsWidget::createCommand (
                                             m_actOnSelection,
                                             cmdEnviron);
 }
-
-//---------------------------------------------------------------------
-
-#include <kpEffectReduceColorsWidget.moc>

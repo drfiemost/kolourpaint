@@ -98,6 +98,3 @@ void kpCommandEnvironment::setTextStyle (const kpTextStyle &textStyle)
 {
     mainWindow ()->setTextStyle (textStyle);
 }
-
-
-#include <kpCommandEnvironment.moc>

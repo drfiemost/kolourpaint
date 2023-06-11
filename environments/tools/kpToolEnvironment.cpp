@@ -207,6 +207,3 @@ void kpToolEnvironment::fitToPage () const
 {
     mainWindow ()->slotFitToPage ();
 }
-
-
-#include <kpToolEnvironment.moc>

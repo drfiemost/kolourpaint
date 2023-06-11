@@ -453,7 +453,3 @@ void kpToolToolBar::slotToolButtonStyleChanged(Qt::ToolButtonStyle style)
     m_baseLayout->activate();
     adjustSizeConstraint();
 }
-
-//---------------------------------------------------------------------
-
-#include <kpToolToolBar.moc>

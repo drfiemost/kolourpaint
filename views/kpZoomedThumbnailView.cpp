@@ -135,6 +135,3 @@ void kpZoomedThumbnailView::adjustToEnvironment ()
     if (viewManager ())
         viewManager ()->restoreQueueUpdates ();
 }
-
-
-#include <kpZoomedThumbnailView.moc>

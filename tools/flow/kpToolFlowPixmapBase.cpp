@@ -81,7 +81,3 @@ QRect kpToolFlowPixmapBase::drawLine (const QPoint &thisPoint, const QPoint &las
     document ()->setImageAt (image, docRect.topLeft ());
     return docRect;
 }
-
-//---------------------------------------------------------------------
-
-#include <kpToolFlowPixmapBase.moc>

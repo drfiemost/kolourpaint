@@ -459,6 +459,3 @@ void kpDualColorButton::paintEvent (QPaintEvent *e)
                      false/*not sunken*/, 2/*lineWidth*/,
                      0/*never fill*/);
 }
-
-
-#include <kpDualColorButton.moc>

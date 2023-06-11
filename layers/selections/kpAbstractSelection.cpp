@@ -308,5 +308,3 @@ void kpAbstractSelection::paintPolygonalBorder (const QPolygon &points,
           kpColor::DarkGray);
     }
 }
-
-#include <kpAbstractSelection.moc>

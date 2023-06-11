@@ -61,6 +61,3 @@ int kpEffectWidgetBase::spacingHint () const
 {
     return KDialog::spacingHint ();
 }
-
-
-#include <kpEffectWidgetBase.moc>

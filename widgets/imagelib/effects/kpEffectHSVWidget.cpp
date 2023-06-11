@@ -123,6 +123,3 @@ kpEffectCommandBase *kpEffectHSVWidget::createCommand (
         m_actOnSelection,
         cmdEnviron);
 }
-
-
-#include <kpEffectHSVWidget.moc>

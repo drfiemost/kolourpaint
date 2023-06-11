@@ -182,6 +182,3 @@ void kpEffectFlattenWidget::slotEnableChanged (bool enable)
 
     emit settingsChanged ();
 }
-
-
-#include <kpEffectFlattenWidget.moc>

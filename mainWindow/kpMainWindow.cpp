@@ -969,7 +969,3 @@ void kpMainWindow::slotDocumentRestored ()
         d->document->setModified (false);
     slotUpdateCaption ();
 }
-
-//---------------------------------------------------------------------
-
-#include <kpMainWindow.moc>

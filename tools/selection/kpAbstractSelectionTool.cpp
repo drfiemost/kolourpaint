@@ -624,9 +624,3 @@ QVariant kpAbstractSelectionTool::operation (DrawType drawType, Operation op,
         return QVariant ();
     }
 }
-
-//---------------------------------------------------------------------
-
-
-#include <kpAbstractSelectionTool.moc>
-

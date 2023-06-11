@@ -276,7 +276,3 @@ void kpColorSimilarityToolBarItem::resizeEvent (QResizeEvent *e)
 
     updateIcon ();
 }
-
-//---------------------------------------------------------------------
-
-#include <kpColorSimilarityToolBarItem.moc>

@@ -93,7 +93,3 @@ void kpThumbnailView::resizeEvent (QResizeEvent *e)
 
     setUpdatesEnabled (oldIsUpdatesEnabled);
 }
-
-
-#include <kpThumbnailView.moc>
-

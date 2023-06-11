@@ -75,6 +75,3 @@ QString kpToolEraser::haventBegunDrawUserMessage () const
 // See the our corresponding .h for brush selection.
 
 // Logic is in kpToolFlowPixmapBase.
-
-
-#include <kpToolEraser.moc>

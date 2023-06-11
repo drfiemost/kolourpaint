@@ -157,6 +157,3 @@ void kpToolPolygon::endDraw (const QPoint &, const QRect &)
         setUserMessage (i18n ("Right drag another line or left click to finish."));
     }
 }
-
-
-#include <kpToolPolygon.moc>

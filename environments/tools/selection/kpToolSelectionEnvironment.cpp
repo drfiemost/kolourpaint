@@ -92,6 +92,3 @@ int kpToolSelectionEnvironment::settingTextStyle () const
 {
     return mainWindow ()->settingTextStyle ();
 }
-
-
-#include <kpToolSelectionEnvironment.moc>

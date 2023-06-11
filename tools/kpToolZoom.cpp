@@ -247,6 +247,3 @@ void kpToolZoom::endDraw (const QPoint &, const QRect &normalizedRect)
         d->dragCompleted = true;
     }
 }
-
-
-#include <kpToolZoom.moc>

@@ -216,6 +216,3 @@ QVariant kpToolText::operation (DrawType drawType, Operation op,
     else
         return kpAbstractSelectionTool::operation (drawType, op, data1, data2);
 }
-
-
-#include <kpToolText.moc>

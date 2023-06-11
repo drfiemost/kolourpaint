@@ -119,7 +119,3 @@ kpColorCells *kpColorPalette::colorCells () const
 {
     return d->colorCells;
 }
-
-//---------------------------------------------------------------------
-
-#include <kpColorPalette.moc>

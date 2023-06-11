@@ -594,5 +594,3 @@ void kpColorCells::slotColorChanged (int cell, const QColor &color)
 
     setModified (true);
 }
-
-#include <kpColorCells.moc>

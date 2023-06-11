@@ -460,9 +460,3 @@ void kpDocument::slotSizeChanged (const QSize &newSize)
 {
     slotSizeChanged (newSize.width (), newSize.height ());
 }
-
-//---------------------------------------------------------------------
-
-
-#include <kpDocument.moc>
-

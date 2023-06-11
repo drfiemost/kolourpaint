@@ -151,6 +151,3 @@ void kpColorSimilarityDialog::slotWhatIsLabelClicked ()
     //
     //         Maybe it's a weird kind of focus?
 }
-
-
-#include <kpColorSimilarityDialog.moc>
