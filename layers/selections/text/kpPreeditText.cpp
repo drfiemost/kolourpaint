@@ -27,6 +27,8 @@
 
 #include <kpPreeditText.h>
 
+#include <algorithm>
+
 //---------------------------------------------------------------------
 
 bool attributeLessThan (const QInputMethodEvent::Attribute &a1, const QInputMethodEvent::Attribute &a2)
@@ -73,7 +75,7 @@ kpPreeditText::kpPreeditText (const QInputMethodEvent *event)
             break;
         }
     }
-    qSort (m_textFormatList.begin (), m_textFormatList.end (), attributeLessThan);
+    std::sort (m_textFormatList.begin (), m_textFormatList.end (), attributeLessThan);
 }
 
 //---------------------------------------------------------------------
