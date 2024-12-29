@@ -201,8 +201,8 @@ void kpToolRectangularBase::applyModifiers ()
     // user wants to startPoint () == center
     if (controlPressed ())
     {
-        int xdiff = qAbs (startPoint ().x () - currentPoint ().x ());
-        int ydiff = qAbs (startPoint ().y () - currentPoint ().y ());
+        int xdiff = std::abs (startPoint ().x () - currentPoint ().x ());
+        int ydiff = std::abs (startPoint ().y () - currentPoint ().y ());
         rect = QRect (startPoint ().x () - xdiff, startPoint ().y () - ydiff,
                       xdiff * 2 + 1, ydiff * 2 + 1);
     }

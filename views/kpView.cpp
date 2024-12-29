@@ -363,9 +363,9 @@ void kpView::updateBuddyViewScrollableContainerRectangle ()
             QRect docRect = buddyView ()->transformViewToDoc (
                 QRect (buddyViewScrollableContainer ()->horizontalScrollBar()->value(),
                        buddyViewScrollableContainer ()->verticalScrollBar()->value(),
-                       qMin (buddyView ()->width (),
+                       std::min (buddyView ()->width (),
                              buddyViewScrollableContainer ()->viewport()->width ()),
-                       qMin (buddyView ()->height (),
+                       std::min (buddyView ()->height (),
                              buddyViewScrollableContainer ()->viewport()->height ())));
 
 

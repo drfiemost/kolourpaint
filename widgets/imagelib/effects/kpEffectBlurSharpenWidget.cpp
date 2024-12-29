@@ -72,17 +72,17 @@ kpEffectBlurSharpenWidget::kpEffectBlurSharpenWidget (bool actOnSelection,
 
     m_typeLabel->setText (
         kpEffectBlurSharpenCommand::nameForType (kpEffectBlurSharpen::Blur));
-    h = qMax (h, m_typeLabel->sizeHint ().height ());
+    h = std::max (h, m_typeLabel->sizeHint ().height ());
 
     m_typeLabel->setText (
         kpEffectBlurSharpenCommand::nameForType (kpEffectBlurSharpen::Sharpen));
-    h = qMax (h, m_typeLabel->sizeHint ().height ());
+    h = std::max (h, m_typeLabel->sizeHint ().height ());
 
     // Set this text last as the label's text needs to reflect the default
     // effect of "None".
     m_typeLabel->setText (
         kpEffectBlurSharpenCommand::nameForType (kpEffectBlurSharpen::None));
-    h = qMax (h, m_typeLabel->sizeHint ().height ());
+    h = std::max (h, m_typeLabel->sizeHint ().height ());
 
 #if DEBUG_KP_EFFECT_BLUR_SHARPEN
     kDebug () << "maximum size hint height" << h;
@@ -178,5 +178,5 @@ kpEffectBlurSharpen::Type kpEffectBlurSharpenWidget::type () const
 // protected
 int kpEffectBlurSharpenWidget::strength () const
 {
-    return qAbs (m_amountInput->value ());
+    return std::abs (m_amountInput->value ());
 }

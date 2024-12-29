@@ -125,7 +125,7 @@ void kpDocumentSaveOptionsPreviewDialog::setFilePixmapAndSize (const QImage &pix
     // (int cast is safe as long as the file size is not more than 20 million
     //  -- i.e. INT_MAX / 100 -- times the pixmap size)
     const int percent = pixmapSize ?
-                            qMax (1,
+                            std::max (1,
                                   (int) ((kpCommandSize::SizeType) fileSize * 100 / pixmapSize)) :
                             0;
 #if DEBUG_KP_DOCUMENT_SAVE_OPTIONS_WIDGET
@@ -153,9 +153,9 @@ void kpDocumentSaveOptionsPreviewDialog::updatePixmapPreview ()
 
     if (m_filePixmap)
     {
-        int maxNewWidth = qMin (m_filePixmap->width (),
+        int maxNewWidth = std::min (m_filePixmap->width (),
                                 m_filePixmapLabel->width ()),
-            maxNewHeight = qMin (m_filePixmap->height (),
+            maxNewHeight = std::min (m_filePixmap->height (),
                                  m_filePixmapLabel->height ());
 
         double keepsAspect = kpTransformPreviewDialog::aspectScale (

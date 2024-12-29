@@ -178,7 +178,7 @@ void kpTransformPreviewDialog::createPreviewGroupBox ()
 
     QVBoxLayout *previewLayout = new QVBoxLayout (m_previewGroupBox);
     previewLayout->setMargin (marginHint () * 2);
-    previewLayout->setSpacing (qMax (1, spacingHint () / 2));
+    previewLayout->setSpacing (std::max (1, spacingHint () / 2));
 
     previewLayout->addWidget (m_previewPixmapLabel, 1/*stretch*/);
     previewLayout->addWidget (updatePushButton, 0/*stretch*/, Qt::AlignHCenter);
@@ -254,14 +254,14 @@ double kpTransformPreviewDialog::aspectScale (int newWidth, int newHeight,
     double heightScale = double (newHeight) / double (oldHeight);
 
     // Keeps aspect ratio
-    return qMin (widthScale, heightScale);
+    return std::min (widthScale, heightScale);
 }
 
 // public static
 int kpTransformPreviewDialog::scaleDimension (int dimension, double scale, int min, int max)
 {
-    return qMax (min,
-                 qMin (max,
+    return std::max (min,
+                 std::min (max,
                        qRound (dimension * scale)));
 }
 

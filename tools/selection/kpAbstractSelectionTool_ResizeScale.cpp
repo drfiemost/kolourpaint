@@ -198,14 +198,14 @@ void kpAbstractSelectionTool::drawResizeScaleTryKeepAspect (
         (verticalGripDragged ? double (newHeight) / oldHeight : 0))
     {
         *newHeightOut = newWidth * oldHeight / oldWidth;
-        *newHeightOut = qMax (originalSelection.minimumHeight (), *newHeightOut);
+        *newHeightOut = std::max (originalSelection.minimumHeight (), *newHeightOut);
     }
     // Height changed more than width?
     // Fix height, change width.
     else
     {
         *newWidthOut = newHeight * oldWidth / oldHeight;
-        *newWidthOut = qMax (originalSelection.minimumWidth (), *newWidthOut);
+        *newWidthOut = std::max (originalSelection.minimumWidth (), *newWidthOut);
     }
 }
 
@@ -236,7 +236,7 @@ void kpAbstractSelectionTool::drawResizeScaleCalculateNewSelectionPosSize (
 
     // Don't allow new width to be less than that kind of selection type's
     // minimum.
-    *newWidth = qMax (originalSelection.minimumWidth (), *newWidth);
+    *newWidth = std::max (originalSelection.minimumWidth (), *newWidth);
 
 
     //
@@ -258,7 +258,7 @@ void kpAbstractSelectionTool::drawResizeScaleCalculateNewSelectionPosSize (
 
     // Don't allow new height to be less than that kind of selection type's
     // minimum.
-    *newHeight = qMax (originalSelection.minimumHeight (), *newHeight);
+    *newHeight = std::max (originalSelection.minimumHeight (), *newHeight);
 
 
     // Keep aspect ratio?

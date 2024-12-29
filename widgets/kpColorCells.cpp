@@ -493,7 +493,7 @@ void kpColorCells::deleteLastRow ()
     // setRowCount() and then, synchronize the color collection.
 
     const int targetNumCells =
-        qMax (0, (rowCount () - 1) * ::TableDefaultNumColumns);
+        std::max (0, (rowCount () - 1) * ::TableDefaultNumColumns);
     d->colorCol.resize (targetNumCells);
 
     // If there was only one row of colors to start with, the effect of this

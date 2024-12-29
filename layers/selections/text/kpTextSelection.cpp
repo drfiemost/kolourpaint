@@ -193,11 +193,11 @@ int kpTextSelection::PreferredMinimumWidthForTextStyle (const kpTextStyle &textS
             QLatin1String ("1234567890abcde"));
 
     const int preferredMinWidth =
-        qMax (150,
+        std::max (150,
               kpTextSelection::TextBorderSize () * 2 + about15CharsWidth);
 
-    return qMax (kpTextSelection::MinimumWidthForTextStyle (textStyle),
-                 qMin (250, preferredMinWidth));
+    return std::max (kpTextSelection::MinimumWidthForTextStyle (textStyle),
+                 std::min (250, preferredMinWidth));
 }
 
 // public static
@@ -206,8 +206,8 @@ int kpTextSelection::PreferredMinimumHeightForTextStyle (const kpTextStyle &text
     const int preferredMinHeight =
         kpTextSelection::TextBorderSize () * 2 + textStyle.fontMetrics ().height ();
 
-    return qMax (kpTextSelection::MinimumHeightForTextStyle (textStyle),
-                 qMin (150, preferredMinHeight));
+    return std::max (kpTextSelection::MinimumHeightForTextStyle (textStyle),
+                 std::min (150, preferredMinHeight));
 }
 
 // public static

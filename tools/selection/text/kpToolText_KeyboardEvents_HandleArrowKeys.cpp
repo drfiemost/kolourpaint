@@ -66,7 +66,7 @@ void kpToolText::handleUpKeyPress (QKeyEvent *e,
     if (!textLines.isEmpty () && cursorRow > 0)
     {
         cursorRow--;
-        cursorCol = qMin (cursorCol, (int) textLines [cursorRow].length ());
+        cursorCol = std::min (cursorCol, (int) textLines [cursorRow].length ());
         viewManager ()->setTextCursorPosition (cursorRow, cursorCol);
     }
 
@@ -87,7 +87,7 @@ void kpToolText::handleDownKeyPress (QKeyEvent *e,
     if (!textLines.isEmpty () && cursorRow < (int) textLines.size () - 1)
     {
         cursorRow++;
-        cursorCol = qMin (cursorCol, (int) textLines [cursorRow].length ());
+        cursorCol = std::min (cursorCol, (int) textLines [cursorRow].length ());
         viewManager ()->setTextCursorPosition (cursorRow, cursorCol);
     }
 

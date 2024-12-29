@@ -74,7 +74,7 @@ int kpView::textSelectionMoveBorderAtomicSize () const
     if (!textSelection ())
         return 0;
 
-    return qMax (4, zoomLevelX () / 100);
+    return std::max (4, zoomLevelX () / 100);
 }
 
 // public
@@ -129,7 +129,7 @@ bool kpView::selectionLargeEnoughToHaveResizeHandlesIfAtomicSize (int atomicSize
 // public
 int kpView::selectionResizeHandleAtomicSize () const
 {
-    int atomicSize = qMin (13, qMax (9, zoomLevelX () / 100));
+    int atomicSize = std::min (13, std::max (9, zoomLevelX () / 100));
     while (atomicSize > 0 &&
            !selectionLargeEnoughToHaveResizeHandlesIfAtomicSize (atomicSize))
     {
@@ -184,9 +184,9 @@ QRegion kpView::selectionResizeHandlesViewRegion (bool forRenderer) const
         if (textSelection () && textSelection ()->textLines ().size () == 1)
         {
             if (zoomLevelX () <= 150)
-                vertEdgeAtomicLength = qMin (vertEdgeAtomicLength, qMax (2, zoomLevelX () / 100));
+                vertEdgeAtomicLength = std::min (vertEdgeAtomicLength, std::max (2, zoomLevelX () / 100));
             else if (zoomLevelX () <= 250)
-                vertEdgeAtomicLength = qMin (vertEdgeAtomicLength, qMax (3, zoomLevelX () / 100));
+                vertEdgeAtomicLength = std::min (vertEdgeAtomicLength, std::max (3, zoomLevelX () / 100));
         }
     }
 

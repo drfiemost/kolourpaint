@@ -180,8 +180,8 @@ bool kpTool::currentPointNextToLast () const
     if (d->lastPoint == QPoint (-1, -1))
         return true;
 
-    int dx = qAbs (d->currentPoint.x () - d->lastPoint.x ());
-    int dy = qAbs (d->currentPoint.y () - d->lastPoint.y ());
+    int dx = std::abs (d->currentPoint.x () - d->lastPoint.x ());
+    int dy = std::abs (d->currentPoint.y () - d->lastPoint.y ());
 
     return (dx <= 1 && dy <= 1);
 }

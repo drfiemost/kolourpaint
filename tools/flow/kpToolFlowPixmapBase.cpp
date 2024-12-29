@@ -50,7 +50,7 @@ kpToolFlowPixmapBase::kpToolFlowPixmapBase (const QString &text, const QString &
 QRect kpToolFlowPixmapBase::drawLine (const QPoint &thisPoint, const QPoint &lastPoint)
 {
     QRect docRect = kpPainter::normalizedRect(thisPoint, lastPoint);
-    docRect = neededRect (docRect, qMax (brushWidth (), brushHeight ()));
+    docRect = neededRect (docRect, std::max (brushWidth (), brushHeight ()));
     kpImage image = document ()->getImageAt (docRect);
 
 

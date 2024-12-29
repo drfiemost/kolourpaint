@@ -138,8 +138,8 @@ void kpTool::seeIfAndHandleArrowKeyPress (QKeyEvent *e)
 #endif
 
 
-    const int viewIncX = (dx ? qMax (1, view->zoomLevelX () / 100) * dx : 0);
-    const int viewIncY = (dy ? qMax (1, view->zoomLevelY () / 100) * dy : 0);
+    const int viewIncX = (dx ? std::max (1, view->zoomLevelX () / 100) * dx : 0);
+    const int viewIncY = (dy ? std::max (1, view->zoomLevelY () / 100) * dy : 0);
 
     int newViewX = oldPoint.x () + viewIncX;
     int newViewY = oldPoint.y () + viewIncY;
@@ -165,8 +165,8 @@ void kpTool::seeIfAndHandleArrowKeyPress (QKeyEvent *e)
 
 
     // TODO: visible width/height (e.g. with scrollbars)
-    const int x = qMin (qMax (newViewX, 0), view->width () - 1);
-    const int y = qMin (qMax (newViewY, 0), view->height () - 1);
+    const int x = std::min (std::max (newViewX, 0), view->width () - 1);
+    const int y = std::min (std::max (newViewY, 0), view->height () - 1);
 
     // QCursor::setPos conveniently causes mouseMoveEvents
     QCursor::setPos (view->mapToGlobal (QPoint (x, y)));

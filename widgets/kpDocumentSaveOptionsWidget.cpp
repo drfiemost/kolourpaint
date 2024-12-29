@@ -720,7 +720,7 @@ void kpDocumentSaveOptionsWidget::updatePreview ()
 
         // It's safe to arbitrarily choose the 0th type as any type in the list
         // should invoke the same KImageIO image loader.
-        image.loadFromData (data, types [0].toLatin1 ());
+        image.loadFromData (data, types[0].toLatin1().constData());
     }
     else
     {

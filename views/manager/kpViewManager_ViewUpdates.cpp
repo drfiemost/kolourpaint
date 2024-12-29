@@ -222,7 +222,7 @@ void kpViewManager::updateViews (const QRect &docRect)
         {
             QRect viewRect = view->transformDocToView (docRect);
 
-            int diff = qRound (double (qMax (view->zoomLevelX (), view->zoomLevelY ())) / 100.0) + 1;
+            int diff = qRound (double (std::max (view->zoomLevelX (), view->zoomLevelY ())) / 100.0) + 1;
 
             QRect newRect = QRect (viewRect.x () - diff,
                                    viewRect.y () - diff,

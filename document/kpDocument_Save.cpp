@@ -270,7 +270,7 @@ bool kpDocument::savePixmapToDevice (const QImage &image,
 #if DEBUG_KP_DOCUMENT
     kDebug () << "\tsaving";
 #endif
-    if (!imageToSave.save (device, type.toLatin1 (), quality))
+    if (!imageToSave.save (device, type.toLatin1().constData(), quality))
     {
     #if DEBUG_KP_DOCUMENT
         kDebug () << "\tQImage::save() returned false";

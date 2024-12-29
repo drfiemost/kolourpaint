@@ -389,8 +389,8 @@ void kpMainWindow::paste(const kpAbstractSelection &sel, bool forceTopLeft)
         d->commandHistory->addCommand (
             new kpTransformResizeScaleCommand (
                 false/*act on doc, not sel*/,
-                qMax (sel.width (), d->document->width ()),
-                qMax (sel.height (), d->document->height ()),
+                std::max (sel.width (), d->document->width ()),
+                std::max (sel.height (), d->document->height ()),
                 kpTransformResizeScaleCommand::Resize,
                 commandEnvironment ()));
     }
@@ -507,12 +507,12 @@ void kpMainWindow::pasteText (const QString &text,
         }
 
         // limit the size to avoid memory overflow
-        width = qMin(qMax(QApplication::desktop()->width(), d->document ? d->document->width() : 0), width);
-        height = qMin(qMax(QApplication::desktop()->height(), d->document ? d->document->height() : 0), height);
+        width = std::min(std::max(QApplication::desktop()->width(), d->document ? d->document->width() : 0), width);
+        height = std::min(std::max(QApplication::desktop()->height(), d->document ? d->document->height() : 0), height);
 
-        const int selWidth = qMax (kpTextSelection::MinimumWidthForTextStyle (ts),
+        const int selWidth = std::max (kpTextSelection::MinimumWidthForTextStyle (ts),
                                    width + kpTextSelection::TextBorderSize () * 2);
-        const int selHeight = qMax (kpTextSelection::MinimumHeightForTextStyle (ts),
+        const int selHeight = std::max (kpTextSelection::MinimumHeightForTextStyle (ts),
                                     height + kpTextSelection::TextBorderSize () * 2);
         kpTextSelection newTextSel (QRect (0, 0, selWidth, selHeight),
             textLines,

@@ -59,8 +59,8 @@ public:
     // to each other
     static QRect normalizedRect(const QPoint& p1, const QPoint& p2)
     {
-      return QRect(qMin(p1.x(), p2.x()), qMin(p1.y(), p2.y()),
-                   qAbs(p2.x() - p1.x()) + 1, qAbs(p2.y() - p1.y()) + 1);
+      return QRect(std::min(p1.x(), p2.x()), std::min(p1.y(), p2.y()),
+                   std::abs(p2.x() - p1.x()) + 1, std::abs(p2.y() - p1.y()) + 1);
     }
 
     // Returns whether the given points are cardinally adjacent (i.e. one point

@@ -134,7 +134,7 @@ static void DrawFace (QPaintDevice *target,
 
 
     const int baseBrightness =
-        qMax (127,
+        std::max (127,
               255 - int (kpColorSimilarityHolder::MaxColorSimilarity *
                          kpColorSimilarityHolder::ColorCubeDiagonalDistance / 2));
     QColor colors [2] =

@@ -48,7 +48,7 @@ static void ColorToHSV(unsigned int c, float* pHue, float* pSaturation, float* p
     if(b >= g && b >= r)
     {
         // Blue
-        min = qMin(r, g);
+        min = std::min(r, g);
         if(b != min)
         {
             *pHue = (float)(r - g) / ((b - min) * 6) + (float)2 / 3;
@@ -64,7 +64,7 @@ static void ColorToHSV(unsigned int c, float* pHue, float* pSaturation, float* p
     else if(g >= r)
     {
         // Green
-        min = qMin(b, r);
+        min = std::min(b, r);
         if(g != min)
         {
             *pHue = (float)(b - r) / ((g - min) * 6) + (float)1 / 3;
@@ -80,7 +80,7 @@ static void ColorToHSV(unsigned int c, float* pHue, float* pSaturation, float* p
     else
     {
         // Red
-        min = qMin(g, b);
+        min = std::min(g, b);
         if(r != min)
         {
             *pHue = (float)(g - b) / ((r - min) * 6);
@@ -128,9 +128,9 @@ static QRgb AdjustHSVInternal (QRgb pix, double hueDiv360, double saturation, do
     h += (float)hueDiv360;
     h -= floor(h);
 
-    s = qMax((float)0, qMin((float)1, s + (float)saturation));
+    s = std::max((float)0, std::min((float)1, s + (float)saturation));
 
-    v = qMax((float)0, qMin((float)1, v + (float)value));
+    v = std::max((float)0, std::min((float)1, v + (float)value));
 
     return ::HSVToColor(alpha, h, s, v);
 }

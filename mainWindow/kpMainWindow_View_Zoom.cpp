@@ -353,10 +353,10 @@ void kpMainWindow::zoomTo (int zoomLevel, bool centerUnderCursor)
         else
         {
             viewX = d->scrollView->horizontalScrollBar()->value () +
-                        qMin (d->mainView->width (),
+                        std::min (d->mainView->width (),
                               d->scrollView->viewport()->width ()) / 2;
             viewY = d->scrollView->verticalScrollBar()->value () +
-                        qMin (d->mainView->height (),
+                        std::min (d->mainView->height (),
                               d->scrollView->viewport()->height ()) / 2;
         }
 
@@ -509,17 +509,17 @@ void kpMainWindow::zoomToRect (const QRect &normalizedDocRect,
     // will fit inside <viewWidth> x <viewHeight>.
     const int zoomX =
         careAboutWidth ?
-            qMax (1, viewWidth * 100 / normalizedDocRect.width ()) :
+            std::max (1, viewWidth * 100 / normalizedDocRect.width ()) :
             INT_MAX;
     const int zoomY =
         careAboutHeight ?
-            qMax (1, viewHeight * 100 / normalizedDocRect.height ()) :
+            std::max (1, viewHeight * 100 / normalizedDocRect.height ()) :
             INT_MAX;
 
     // Since kpView only supports identical horizontal and vertical zooms,
     // choose the one that will show the greatest amount of document
     // content.
-    const int zoomLevel = qMin (zoomX, zoomY);
+    const int zoomLevel = std::min (zoomX, zoomY);
 
 #if DEBUG_KP_MAIN_WINDOW
     kDebug () << "\tzoomX=" << zoomX

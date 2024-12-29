@@ -186,7 +186,7 @@ kpColorCollection::open(const KUrl &url, QWidget *parent)
         if (line.isEmpty()) continue;
         int r, g, b;
         int pos = 0;
-        if (sscanf(line.toAscii(), "%d %d %d%n", &r, &g, &b, &pos) >= 3)
+        if (sscanf(line.toAscii().constData(), "%d %d %d%n", &r, &g, &b, &pos) >= 3)
         {
            r = qBound(0, r, 255);
            g = qBound(0, g, 255);

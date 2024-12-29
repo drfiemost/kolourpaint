@@ -298,8 +298,8 @@ QSize kpMainWindow::defaultDocSize () const
     {
         // Don't get too big or you'll thrash (or even lock up) the computer
         // just by opening a window
-        docSize = QSize (qMin (2048, docSize.width ()),
-                         qMin (2048, docSize.height ()));
+        docSize = QSize (std::min (2048, docSize.width ()),
+                         std::min (2048, docSize.height ()));
     }
 
     return docSize;
@@ -1235,7 +1235,7 @@ void kpMainWindow::sendImageToPrinter (QPrinter *printer,
     const double scaleDpiY =
         (image.height () / (printerHeightMM / KP_MILLIMETERS_PER_INCH))
             / dpiY;
-    const double scaleDpi = qMax (scaleDpiX, scaleDpiY);
+    const double scaleDpi = std::max (scaleDpiX, scaleDpiY);
 #if DEBUG_KP_MAIN_WINDOW
     kDebug () << "\t\tscaleDpi: x=" << scaleDpiX << " y=" << scaleDpiY
                << " --> scale at " << scaleDpi << " to fit?"
@@ -1267,7 +1267,7 @@ void kpMainWindow::sendImageToPrinter (QPrinter *printer,
     #endif
         kpPixmapFX::scale (&image,
              image.width (),
-             qMax (1, qRound (image.height () * dpiX / dpiY)),
+             std::max (1, qRound (image.height () * dpiX / dpiY)),
              false/*don't antialias*/);
 
         dpiY = dpiX;
@@ -1279,7 +1279,7 @@ void kpMainWindow::sendImageToPrinter (QPrinter *printer,
                    << dpiY << endl;
     #endif
         kpPixmapFX::scale (&image,
-             qMax (1, qRound (image.width () * dpiY / dpiX)),
+             std::max (1, qRound (image.width () * dpiY / dpiX)),
              image.height (),
              false/*don't antialias*/);
 
@@ -1290,7 +1290,7 @@ void kpMainWindow::sendImageToPrinter (QPrinter *printer,
 
 
     // QPrinter::setResolution() has to be called before QPrinter::setup().
-    printer->setResolution (qMax (1, qRound (dpiX)));
+    printer->setResolution (std::max (1, qRound (dpiX)));
 
 
     sendDocumentNameToPrinter (printer);

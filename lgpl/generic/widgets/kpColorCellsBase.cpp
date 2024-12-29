@@ -147,8 +147,8 @@ void kpColorCellsBase::setRowColumnCounts (int rows, int columns)
     QColor *oldColors = d->colors;
     d->colors = new QColor [newRows * newCols];
 
-    for (int r = 0; r < qMin (oldRows, newRows); r++)
-        for (int c = 0; c < qMin (oldCols, newCols); c++)
+    for (int r = 0; r < std::min (oldRows, newRows); r++)
+        for (int c = 0; c < std::min (oldCols, newCols); c++)
             d->colors [r * newCols + c] = oldColors [r * oldCols + c];
 
     delete [] oldColors;

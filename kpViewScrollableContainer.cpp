@@ -489,7 +489,7 @@ QSize kpViewScrollableContainer::newDocSize (int viewDX, int viewDY) const
     const int docX = (int) m_view->transformViewToDocX (m_view->width () + viewDX);
     const int docY = (int) m_view->transformViewToDocY (m_view->height () + viewDY);
 
-    return QSize (qMax (1, docX), qMax (1, docY));
+    return QSize (std::max (1, docX), std::max (1, docY));
 }
 
 //---------------------------------------------------------------------
@@ -527,7 +527,7 @@ int kpViewScrollableContainer::bottomResizeLineWidth () const
         return -1;
 
     if (docResizingGrip ()->type () & kpGrip::Bottom)
-        return qMax (m_view->zoomLevelY () / 100, 1);
+        return std::max (m_view->zoomLevelY () / 100, 1);
     else
         return 1;
 }
@@ -544,7 +544,7 @@ int kpViewScrollableContainer::rightResizeLineWidth () const
         return -1;
 
     if (docResizingGrip ()->type () & kpGrip::Right)
-        return qMax (m_view->zoomLevelX () / 100, 1);
+        return std::max (m_view->zoomLevelX () / 100, 1);
     else
         return 1;
 }
@@ -752,8 +752,8 @@ void kpViewScrollableContainer::slotGripContinuedDraw (int inViewDX, int inViewD
 
     m_haveMovedFromOriginalDocSize = true;
 
-    updateResizeLines (qMax (1, qMax (m_view->width () + viewDX, (int) m_view->transformDocToViewX (1))),
-                       qMax (1, qMax (m_view->height () + viewDY, (int) m_view->transformDocToViewY (1))),
+    updateResizeLines (std::max (1, std::max (m_view->width () + viewDX, (int) m_view->transformDocToViewX (1))),
+                       std::max (1, std::max (m_view->height () + viewDY, (int) m_view->transformDocToViewY (1))),
                        viewDX, viewDY);
 
     emit continuedDocResize (newDocSize ());
@@ -1099,8 +1099,8 @@ bool kpViewScrollableContainer::slotDragScroll (bool *didSomething)
         dyMultiplier = distanceFromRectToMultiplier (pos.y () - rect.bottom ());
     }
 
-    dx *= dxMultiplier;// * qMax (1, m_zoomLevel / 100);
-    dy *= dyMultiplier;// * qMax (1, m_zoomLevel / 100);
+    dx *= dxMultiplier;// * std::max (1, m_zoomLevel / 100);
+    dy *= dyMultiplier;// * std::max (1, m_zoomLevel / 100);
 
     if (dx || dy)
     {

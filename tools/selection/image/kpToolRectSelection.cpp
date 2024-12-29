@@ -78,8 +78,8 @@ bool kpToolRectSelection::drawCreateMoreSelectionAndUpdateStatusBar (
             environ ()->imageSelectionTransparency ()));
 
     setUserShapePoints (startPoint (),
-        QPoint (qMax (0, qMin (currentPoint ().x (), document ()->width () - 1)),
-                qMax (0, qMin (currentPoint ().y (), document ()->height () - 1))));
+        QPoint (std::max (0, std::min (currentPoint ().x (), document ()->width () - 1)),
+                std::max (0, std::min (currentPoint ().y (), document ()->height () - 1))));
 
     return true;
 }

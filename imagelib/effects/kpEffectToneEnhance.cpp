@@ -60,9 +60,9 @@ inline unsigned int ComputeTone(unsigned int color)
 inline unsigned int AdjustTone(unsigned int color, unsigned int oldTone, unsigned int newTone, double amount)
 {
   return qRgba(
-      qMax(0, qMin(255, (int) (amount * qRed(color) * newTone / oldTone + (1.0 - amount) * qRed(color)))),
-      qMax(0, qMin(255, (int) (amount * qGreen(color) * newTone / oldTone + (1.0 - amount) * qGreen(color)))),
-      qMax(0, qMin(255, (int) (amount * qBlue(color) * newTone / oldTone + (1.0 - amount) * qBlue(color)))),
+      std::max(0, std::min(255, (int) (amount * qRed(color) * newTone / oldTone + (1.0 - amount) * qRed(color)))),
+      std::max(0, std::min(255, (int) (amount * qGreen(color) * newTone / oldTone + (1.0 - amount) * qGreen(color)))),
+      std::max(0, std::min(255, (int) (amount * qBlue(color) * newTone / oldTone + (1.0 - amount) * qBlue(color)))),
       qAlpha(color)
     );
 }

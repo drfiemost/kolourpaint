@@ -49,8 +49,8 @@
 // public static
 bool kpPainter::pointsAreCardinallyAdjacent (const QPoint &p, const QPoint &q)
 {
-    int dx = qAbs (p.x () - q.x ());
-    int dy = qAbs (p.y () - q.y ());
+    int dx = std::abs (p.x () - q.x ());
+    int dy = std::abs (p.y () - q.y ());
 
     return (dx + dy == 1);
 }
@@ -103,8 +103,8 @@ QList <QPoint> kpPainter::interpolatePoints (const QPoint &startPoint,
     const int dy = y2 - y1;
 
     // Absolute values of differences
-    const int ix = qAbs (dx);
-    const int iy = qAbs (dy);
+    const int ix = std::abs (dx);
+    const int iy = std::abs (dy);
 
     // Larger of the x and y differences
     const int inc = ix > iy ? ix : iy;
@@ -393,7 +393,7 @@ static QRect Wash (kpImage *image,
     // rectangle.
     const QRect normalizedRect = kpPainter::normalizedRect(pack.startPoint, pack.endPoint);
     pack.readableImageRect = kpTool::neededRect (normalizedRect,
-        qMax (pack.penWidth, pack.penHeight));
+        std::max (pack.penWidth, pack.penHeight));
 #if DEBUG_KP_PAINTER
     kDebug () << "kppainter.cpp:Wash() startPoint=" << startPoint
               << " endPoint=" << endPoint

@@ -80,7 +80,7 @@ int kpToolText::calcClickCreateDimension (int mouseStart, int mouseEnd,
         {
             // Cap width/height to not extend past but not below smallest
             // possible selection width/height
-            ret = qMax (smallestMin, docSize - mouseStart);
+            ret = std::max (smallestMin, docSize - mouseStart);
         }
     }
     // X or Y decreasing
@@ -93,7 +93,7 @@ int kpToolText::calcClickCreateDimension (int mouseStart, int mouseEnd,
         {
             // Cap width/height to not extend past but not below smallest
             // possible selection width/height.
-            ret = qMax (smallestMin, mouseStart + 1);
+            ret = std::max (smallestMin, mouseStart + 1);
         }
     }
 
