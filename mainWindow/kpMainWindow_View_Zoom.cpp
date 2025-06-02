@@ -184,7 +184,7 @@ void kpMainWindow::zoomToPre (int zoomLevel)
     kDebug () << "kpMainWindow::zoomToPre(" << zoomLevel << ")";
 #endif
 
-    zoomLevel = qBound (kpView::MinZoomLevel, zoomLevel, kpView::MaxZoomLevel);
+    zoomLevel = std::clamp (zoomLevel, kpView::MinZoomLevel, kpView::MaxZoomLevel);
 
 // mute point since the thumbnail suffers from this too
 #if 0

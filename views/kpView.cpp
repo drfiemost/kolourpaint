@@ -179,8 +179,8 @@ int kpView::zoomLevelY (void) const
 // public virtual
 void kpView::setZoomLevel (int hzoom, int vzoom)
 {
-    hzoom = qBound (MinZoomLevel, hzoom, MaxZoomLevel);
-    vzoom = qBound (MinZoomLevel, vzoom, MaxZoomLevel);
+    hzoom = std::clamp (hzoom, MinZoomLevel, MaxZoomLevel);
+    vzoom = std::clamp (vzoom, MinZoomLevel, MaxZoomLevel);
 
     if (hzoom == d->hzoom && vzoom == d->vzoom)
         return;

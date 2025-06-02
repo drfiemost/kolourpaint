@@ -197,7 +197,7 @@ void kpDocumentMetaInfo::setDotsPerMeterX (int val)
         return;
     }
 
-    d->m_dotsPerMeterX = qBound (MinDotsPerMeter, val, MaxDotsPerMeter);
+    d->m_dotsPerMeterX = std::clamp (val, MinDotsPerMeter, MaxDotsPerMeter);
 }
 
 //---------------------------------------------------------------------
@@ -220,7 +220,7 @@ void kpDocumentMetaInfo::setDotsPerMeterY (int val)
         return;
     }
 
-    d->m_dotsPerMeterY = qBound (MinDotsPerMeter, val, MaxDotsPerMeter);
+    d->m_dotsPerMeterY = std::clamp (val, MinDotsPerMeter, MaxDotsPerMeter);
 }
 
 //---------------------------------------------------------------------
@@ -236,8 +236,8 @@ QPoint kpDocumentMetaInfo::offset () const
 // public
 void kpDocumentMetaInfo::setOffset (const QPoint &point)
 {
-    const int x = qBound (MinOffset, point.x (), MaxOffset);
-    const int y = qBound (MinOffset, point.y (), MaxOffset);
+    const int x = std::clamp (point.x (), MinOffset, MaxOffset);
+    const int y = std::clamp (point.y (), MinOffset, MaxOffset);
 
     d->m_offset = QPoint (x, y);
 }

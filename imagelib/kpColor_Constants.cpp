@@ -39,7 +39,7 @@ static inline int RoundUp2 (int val)
 
 static inline int Bound0_255 (int val)
 {
-    return qBound (0, val, 255);
+    return std::clamp (val, 0, 255);
 }
 
 
